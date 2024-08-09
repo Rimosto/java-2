@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "arrary",
+            "request": "launch",
+            "mainClass": "arrary",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "staircase",
+            "request": "launch",
+            "mainClass": "staircase",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "diamond",
+            "request": "launch",
+            "mainClass": "diamond",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "java",
+            "request": "launch",
+            "mainClass": "java",
+            "projectName": "java procject_d1435aa8"
+        }
+    ]
+}
