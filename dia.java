@@ -1,6 +1,6 @@
 public class dia {
     public static void main(String[] args) {
-        int n =71;
+        int n =7;
 
         // Upper half of the diamond
         for (int i = 1; i <= n; i += 2) {

@@ -7,7 +7,9 @@ import java.util.Scanner;
             Scanner scanner = new Scanner(System.in);
         
         {
-            System.out.print("EMPLOYEE NAME:");           
+            System.out.print("EMPLOYEE NAME:");
+            String EmployeeName = scanner.nextLine();
+           
             System.out.println("Enter the number of days worked: ");
             long daysWorked = Long.parseLong(scanner.nextLine());
            
