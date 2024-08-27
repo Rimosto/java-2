@@ -1,21 +1,20 @@
 import java.util.Scanner;
 
-    class Data
-    {
-        public static void main(String[] args) 
-        {
-            Scanner scanner = new Scanner(System.in);
-        
+class Data {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         {
             System.out.print("EMPLOYEE NAME:");
             String EmployeeName = scanner.nextLine();
-           
-            System.out.println("Enter the number of days worked: ");
-            long daysWorked = Long.parseLong(scanner.nextLine());
-           
+            System.out.print("EMPLOYEE ID:");
+            int EmployeeID = scanner.nextInt();
+            System.out.print("DAYS WORKED: ");
+            int DaysWorked = scanner.nextInt();
+
             final double rate = 1000;
 
-            double basicPay = daysWorked * rate;
+            double basicPay = DaysWorked * rate;
 
             double houseAllowance = 0.03 * basicPay;
             double transportAllowance = 0.02 * basicPay;
@@ -28,8 +27,8 @@ import java.util.Scanner;
             double nhif = 0.02 * grossPay;
 
             double netPay = grossPay - paye - shift - nhif;
-            
-          
+
+            System.out.println("DEAR: " + EmployeeName + " " + "ID:" + EmployeeID + " " + "YOUR PAYSLIP IS:");
             System.out.println("BASIC PAY:" + basicPay);
             System.out.println("TRANSPORT ALLOWANCE:" + transportAllowance);
             System.out.println("HOUSE ALLOWANCE:" + houseAllowance);
@@ -37,9 +36,9 @@ import java.util.Scanner;
             System.out.println("PAYE DEDUCTIONS:" + paye);
             System.out.println("SHIF DEDUCTION:" + shift);
             System.out.println("NSSF:" + nhif);
-           System.out.println("NET PAY:" + netPay);
-
-          scanner.close();
+            System.out.println("GROSS PAY:" + grossPay);
+            System.out.println("NET PAY:" + netPay);
+            scanner.close();
         }
     }
 }

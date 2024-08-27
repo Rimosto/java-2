@@ -4,6 +4,29 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+
+        {
+            "type": "java",
+            "name": "Data",
+            "request": "launch",
+            "mainClass": "Data",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "oop",
+            "request": "launch",
+            "mainClass": "oop",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "variables",
+            "request": "launch",
+            "mainClass": "variables",
+            "projectName": "java procject_d1435aa8"
+        },
         {
             "type": "java",
             "name": "arrary",
