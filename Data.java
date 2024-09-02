@@ -3,7 +3,6 @@ import java.util.Scanner;
 class Data {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         {
             System.out.print("EMPLOYEE NAME:");
             String EmployeeName = scanner.nextLine();
@@ -11,23 +10,16 @@ class Data {
             int EmployeeID = scanner.nextInt();
             System.out.print("DAYS WORKED: ");
             int DaysWorked = scanner.nextInt();
-
             final double rate = 1000;
-
             double basicPay = DaysWorked * rate;
-
             double houseAllowance = 0.03 * basicPay;
             double transportAllowance = 0.02 * basicPay;
             double medicalAllowance = 0.015 * basicPay;
-
             double grossPay = basicPay + houseAllowance + transportAllowance + medicalAllowance;
-
             double paye = 0.05 * grossPay;
             double shift = 0.06 * grossPay;
             double nhif = 0.02 * grossPay;
-
             double netPay = grossPay - paye - shift - nhif;
-
             System.out.println("DEAR: " + EmployeeName + " " + "ID:" + EmployeeID + " " + "YOUR PAYSLIP IS:");
             System.out.println("BASIC PAY:" + basicPay);
             System.out.println("TRANSPORT ALLOWANCE:" + transportAllowance);

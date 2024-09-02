@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Staircase",
+            "request": "launch",
+            "mainClass": "Staircase",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Animal",
+            "request": "launch",
+            "mainClass": "inheritance.Animal",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "training.animals.inheritance.App",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverridingPolymorhism",
+            "request": "launch",
+            "mainClass": "com.systechafrica.part2.inheritance.animals.MethodOverridingPolymorhism",
+            "projectName": "java-se-training"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverridingPolymorhism",
+            "request": "launch",
+            "mainClass": "MethodOverridingPolymorhism",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Data",
+            "request": "launch",
+            "mainClass": "Data",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "oop",
+            "request": "launch",
+            "mainClass": "oop",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "variables",
+            "request": "launch",
+            "mainClass": "variables",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
             "name": "arrary",
             "request": "launch",
             "mainClass": "arrary",

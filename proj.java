@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class proj {
+public class Proj {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("ENTER YOUR NAME: ");

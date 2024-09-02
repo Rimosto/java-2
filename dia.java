@@ -1,7 +1,6 @@
-public class dia {
+public class Dia {
     public static void main(String[] args) {
-        int n =7;
-
+        int n = 7;
         // Upper half of the diamond
         for (int i = 1; i <= n; i += 2) {
             int spaces = (n - i) / 2;
@@ -13,7 +12,6 @@ public class dia {
             }
             System.out.println();
         }
-
         // Lower half of the diamond
         for (int i = n - 2; i > 0; i -= 2) {
             int spaces = (n - i) / 2;
