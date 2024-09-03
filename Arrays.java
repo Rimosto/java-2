@@ -1,4 +1,4 @@
-public class arrary {
+public class Arrays {
     public static void main(String[] args) {
         int[] evenNums = new int[] {2, 4, 6, 8, 10};
 

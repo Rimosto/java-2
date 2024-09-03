@@ -1,9 +1,8 @@
-public class staircase {
+public class Staircase {
     public static void main(String[] args) {
         int n = 6;
-        for (int i = 1; i <= n; i++)
-         {
-            for (int p = 1; p <= n-i; p++) {
+        for (int i = 1; i <= n; i++) {
+            for (int p = 1; p <= n - i; p++) {
                 System.out.print(" ");
 
             }
@@ -12,6 +11,5 @@ public class staircase {
             }
             System.out.println();
         }
-        
-}
+    }
 }
