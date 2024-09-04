@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "POs",
+            "request": "launch",
+            "mainClass": "POs",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "PosSystem",
+            "request": "launch",
+            "mainClass": "PosSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
             "name": "Atm",
             "request": "launch",
             "mainClass": "Atm",

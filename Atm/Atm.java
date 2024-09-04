@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Atm {
     private static final String DEFAULT_PASSWORD = "Admin123";
     private static final int ATTEMPTS = 3;
-    private static final double INITIAL_BALANCE = 10001000.00;
+    private static final double INITIAL_BALANCE = 25.00;
     private static final double WITHDRAWAL_CHARGE = 0.02;
 
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class Atm {
             }
 
             if (!LoggedIn) {
-                System.out.println("Maximum login attempts exceeded. Exiting...");
+                System.out.println("incorrect password please confirm and try again. Exiting...");
                 return;
             }
 
@@ -40,19 +40,15 @@ public class Atm {
                 scanner.nextLine();
                 switch (option) {
                     case 1:
-                        System.out.println("Your balance is: Ksh " + balance);
+                        showBalance();
                         break;
                     case 2:
-                        System.out.print("Enter amount to deposit: ");
-                        double depositAmount = scanner.nextDouble();
-                        scanner.nextLine(); 
-                        balance += depositAmount;
-                        System.out.println("Deposit successful. New balance: Ksh " + balance);
+                        depositnow();
                         break;
                     case 3:
                         System.out.print("Enter amount to withdraw: ");
                         double withdrawAmount = scanner.nextDouble();
-                        scanner.nextLine(); 
+                        scanner.nextLine();
                         if (withdrawAmount > balance) {
                             System.out.println("Insufficient balance.");
                         } else {
@@ -62,15 +58,32 @@ public class Atm {
                         }
                         break;
                     case 4:
-                        System.out.println("Transfer cash option not implemented.");
+                        TransferCash();
                         break;
                     case 5:
-                        System.out.println("Exiting...");
+                        Exiting();
                         return;
                     default:
-                        System.out.println("Invalid option. Please choose a valid option.");
+                        option();
                 }
             }
         }
+    }
+
+    public static final void showBalance() {
+        System.out.println("Your balance is: Ksh " + INITIAL_BALANCE);
+    }
+
+    public static final void depositnow() {
+        System.out.println("Deposit successful. New balance: Ksh " + INITIAL_BALANCE);
+    }
+    public static final void TransferCash(){
+        System.out.println("Transfer cash option not implemented.");
+    }
+    public static final void Exiting(){
+        System.out.println("Exiting...");
+    }
+    public static final void option(){
+        System.out.println("invalid option: ");
     }
 }
