@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Receipt",
+            "request": "launch",
+            "mainClass": "Receipt",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "PosSystem",
+            "request": "launch",
+            "mainClass": "Exception.PosSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "POs",
+            "request": "launch",
+            "mainClass": "Atm.POs",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
             "name": "POs",
             "request": "launch",
             "mainClass": "POs",

@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 class Item {
     String code;
@@ -21,14 +21,20 @@ public class PosSystem {
 
     private Item[] items = new Item[MAX_ITEMS];
     private int itemCount = 0;
+    public static double totalDue = 0;
 
     public static void main(String[] args) {
         PosSystem posSystem = new PosSystem();
-        posSystem.login();
-        posSystem.mainMenu();
+        try {
+            posSystem.login();
+            posSystem.mainMenu();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    void login() {
+    void login() throws InvalidPasswordException, MaximumLoginAttemptsExceededException {
+
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
         while (attempts < MAX_LOGIN_ATTEMPTS) {
@@ -39,14 +45,17 @@ public class PosSystem {
                 return;
             } else {
                 attempts++;
-                System.out.println("Invalid password. Try again.");
+                if (attempts < MAX_LOGIN_ATTEMPTS) {
+                    System.out.println("Invalid password. Try again.");
+                    // throw new InvalidPasswordException("invalid password. try again");
+
+                }
             }
         }
-        System.out.println("Maximum login attempts exceeded.");
-        System.exit(1);
+        throw new MaximumLoginAttemptsExceededException("Maximum login attempts exceeded.");
     }
 
-    void mainMenu() {
+    void mainMenu() throws InvalidOptionException, MaximumItemsReachedExceededException, InsufficientAmountException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("SYSTECH MALL SYSTEM");
@@ -70,17 +79,17 @@ public class PosSystem {
                     System.out.println("Exiting...");
                     return;
                 default:
-                    System.out.println("Invalid option. Try again.");
+                    throw new InvalidOptionException("Invalid option. Try again.");
             }
         }
     }
 
-    private void addItem() {
+    private void addItem() throws MaximumItemsReachedExceededException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             if (itemCount >= MAX_ITEMS) {
-                System.out.println("Maximum items reached.");
-                break;
+                throw new MaximumItemsReachedExceededException("Maximum items reached.");
+
             }
             System.out.print("Enter item code: ");
             String code = scanner.next();
@@ -92,43 +101,46 @@ public class PosSystem {
             items[itemCount++] = item;
             System.out.print("Do you want to add another item? (Y/N): ");
             char response = scanner.next().charAt(0);
-            if (response == 'N' || response == 'n') {
+            if (response == 'N') {
                 break;
             }
         }
     }
 
-    public static  double totalDue = 0;
-    private void makePayment() {
-       
+    private void makePayment() throws InsufficientAmountException {
+        totalDue = 0;
         for (int i = 0; i < itemCount; i++) {
             totalDue += items[i].totalValue;
         }
-        System.out.println("Item Code\tQuantity\tUnit Price\tTotal Value");
-        for (int i = 0; i < itemCount; i++) {
-            System.out.printf("%s\t%d\t%.2f\t%.2f\n", items[i].code, items[i].quantity, items[i].unitPrice, items[i].totalValue);
-        }
+        // System.out.println("Item Code\tQuantity\tUnit Price\tTotal Value");
+        // for (int i = 0; i < itemCount; i++) {
+        // System.out.printf("%s\t%d\t%.2f\t%.2f\n", items[i].code, items[i].quantity,
+        // items[i].unitPrice,
+        // items[i].totalValue);
+        // }
         System.out.printf("Total:\t%.2f\n", totalDue);
         System.out.print("Enter amount given by customer: ");
         Scanner scanner = new Scanner(System.in);
         double amountGiven = scanner.nextDouble();
+        if (amountGiven < totalDue) {
+            throw new InsufficientAmountException("Insufficient amount given.");
+            }
         double change = amountGiven - totalDue;
         System.out.printf("Change:\t%.2f\n", change);
-        System.out.println("THANK YOU FOR SHOPPING WITH US");
     }
 
     private void displayReceipt() {
         System.out.println("SYSTECH MALL SYSTEM");
         System.out.println("RECEIPT");
+        for (int i = 0; i < itemCount; i++) {
+            totalDue += items[i].totalValue;
+        }
         System.out.println("Item Code\tQuantity\tUnit Price\tTotal Value");
+        for (int i = 0; i < itemCount; i++) {
+            System.out.printf("%s\t%d\t%.2f\t%.2f\n", items[i].code, items[i].quantity, items[i].unitPrice,
+                    items[i].totalValue);
+        }
+        System.out.printf("Total:\t%.2f\n", totalDue);
         System.out.println("THANK YOU FOR SHOPPING WITH US");
-    for (int i = 0; i < itemCount; i++) {
-        totalDue += items[i].totalValue;
     }
-    System.out.println("Item Code\tQuantity\tUnit Price\tTotal Value");
-    for (int i = 0; i < itemCount; i++) {
-        System.out.printf("%s\t%d\t%.2f\t%.2f\n", items[i].code, items[i].quantity, items[i].unitPrice, items[i].totalValue);
-    }
-    System.out.printf("Total:\t%.2f\n", totalDue);
-}
 }
