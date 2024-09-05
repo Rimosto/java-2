@@ -3,31 +3,31 @@ import java.util.InputMismatchException;
 import java.util.*;
 
 // Custom Exceptions
-class InvalidPasswordException extends Exception {
+class InvalidPasswordException extends RuntimeException {
     public InvalidPasswordException(String message) {
         super(message);
     }
 }
 
-class MaximumLoginAttemptsExceededException extends Exception {
+class MaximumLoginAttemptsExceededException extends RuntimeException {
     public MaximumLoginAttemptsExceededException(String message) {
         super(message);
     }
 }
 
-class MaximumItemsReachedExceededException extends Exception {
+class MaximumItemsReachedExceededException extends RuntimeException {
     public MaximumItemsReachedExceededException(String message) {
         super(message);
     }
 }
 
-class InvalidOptionException extends Exception {
+class InvalidOptionException extends RuntimeException {
     public InvalidOptionException(String message) {
         super(message);
     }
 }
 
-class InsufficientAmountException extends Exception {
+class InsufficientAmountException extends RuntimeException {
     public InsufficientAmountException(String message) {
         super(message);
     }
@@ -66,7 +66,7 @@ public class Receipt {
         try {
             posSystem.login();
             posSystem.mainMenu();
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
     }
