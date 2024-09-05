@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SystechRestaurant",
+            "request": "launch",
+            "mainClass": "SystechRestaurant",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
             "name": "Receipt",
             "request": "launch",
             "mainClass": "Receipt",
