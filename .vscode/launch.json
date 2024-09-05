@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "date",
+            "request": "launch",
+            "mainClass": "date",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
             "name": "SystechRestaurant",
             "request": "launch",
             "mainClass": "SystechRestaurant",

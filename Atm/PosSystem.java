@@ -130,8 +130,10 @@ public class PosSystem {
 
     private void displayReceipt() {
         totalDue = 0;
+        Date date = new Date();
         System.out.println("SYSTECH MALL SYSTEM");
         System.out.println("RECEIPT");
+        System.out.println("Date: " + date);
         System.out.println("Item Code\tQuantity\tUnit Price\tTotal Value");
         for (int i = 0; i < itemCount; i++) {
             totalDue += items[i].totalValue;
