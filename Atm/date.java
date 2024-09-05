@@ -28,6 +28,6 @@ public class date {
         date2Time2 = date2Time2.minusHours(101);
         System.out.println("MINUS HOURS "+ date2Time2);
         date2Time2 = date2Time2.minusSeconds(300);
-        System.out.println("MINUS SEC"+date2Time2);
+        System.out.println("MINUS SEC "+date2Time2);
     }
 }
