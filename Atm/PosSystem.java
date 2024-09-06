@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.*;
 
 class Item {
@@ -124,13 +125,16 @@ public class PosSystem {
             System.out.println("Insufficient amount given.");
             return;
         }
+        else{
         double change = amountGiven - totalDue;
         System.out.printf("Change:\t%.2f\n", change);
+        }
+    
     }
 
     private void displayReceipt() {
         totalDue = 0;
-        Date date = new Date();
+        LocalDateTime date = LocalDateTime.now();
         System.out.println("SYSTECH MALL SYSTEM");
         System.out.println("RECEIPT");
         System.out.println("Date: " + date);
