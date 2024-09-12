@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.time.*;
 
 public class SystechRestaurant {
     private static final String DEFAULT_PASSWORD = "Admin123";
@@ -18,51 +17,52 @@ public class SystechRestaurant {
         menuItems.add(new Menuitem("NDENGU AND ACCOMPLISHMENTS", 70));
         menuItems.add(new Menuitem("BEANS AND ACCOMP LISHI'4ENTS", 70));
         menuItems.add(new Menuitem("PILAU VEG", 90));
-        menuItems.add(new Menuitem("gult", 0)); // Note: Price is not specified for this item
+        menuItems.add(new Menuitem("guit", 100));
 
         // Login
         boolean isLoggedIn = false;
         int loginAttempts = 0;
-        Scanner scanner = new Scanner(System.in);
-        while (!isLoggedIn && loginAttempts < MAX_LOGIN_ATTEMPTS) {
-            System.out.print("Enter password: ");
-            String password = scanner.nextLine();
-            if (password.equals(DEFAULT_PASSWORD)) {
-                isLoggedIn = true;
-            } else {
-                loginAttempts++;
-                System.out.println("Invalid password. Try again.");
-            }
-        }
-
-        if (isLoggedIn) {
-            System.out.println("Successful login!");
-            displayMenu();
-            while (true) {
-                System.out.print("Enter Your Meal/Drink option: ");
-                int option = scanner.nextInt();
-                scanner.nextLine(); // Consume newline left-over
-                Menuitem selectedItem = menuItems.get(option - 1);
-                selectedItems.add(selectedItem);
-                System.out.print("Do you want to enter another meal/drink option? (Y/N): ");
-                String response = scanner.nextLine();
-                if (response.equalsIgnoreCase("N")) {
-                    break;
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (!isLoggedIn && loginAttempts < MAX_LOGIN_ATTEMPTS) {
+                System.out.print("Enter password: ");
+                String password = scanner.nextLine();
+                if (password.equals(DEFAULT_PASSWORD)) {
+                    isLoggedIn = true;
+                } else {
+                    loginAttempts++;
+                    System.out.println("Invalid password. Try again.");
                 }
             }
 
-            System.out.print("Proceed to Payment? (Y/N): ");
-            String response = scanner.nextLine();
-            if (response.equalsIgnoreCase("Y")) {
-                displayOrderSummary();
-                System.out.print("Enter amount to Pay: ");
-                double amount = scanner.nextDouble();
-                scanner.nextLine(); // Consume newline left-over
-                double balance = calculateBalance(amount);
-                System.out.println("Your Balance is: " + balance);
+            if (isLoggedIn) {
+                System.out.println("Successful login!");
+                displayMenu();
+                while (true) {
+                    System.out.print("Enter Your Meal/Drink option: ");
+                    int option = scanner.nextInt();
+                    scanner.nextLine(); // Consume newline left-over
+                    Menuitem selectedItem = menuItems.get(option - 1);
+                    selectedItems.add(selectedItem);
+                    System.out.print("Do you want to enter another meal/drink option? (Y/N): ");
+                    String response = scanner.nextLine();
+                    if (response.equalsIgnoreCase("N")) {
+                        break;
+                    }
+                }
+
+                System.out.print("Proceed to Payment? (Y/N): ");
+                String response = scanner.nextLine();
+                if (response.equalsIgnoreCase("Y")) {
+                    displayOrderSummary();
+                    System.out.print("Enter amount to Pay: ");
+                    double amount = scanner.nextDouble();
+                    scanner.nextLine(); // Consume newline left-over
+                    double balance = calculateBalance(amount);
+                    System.out.println("Your Balance is: " + balance);
+                }
+            } else {
+                System.out.println("Maximum login attempts exceeded.");
             }
-        } else {
-            System.out.println("Maximum login attempts exceeded.");
         }
     }
 

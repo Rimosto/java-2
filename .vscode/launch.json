@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LibraryManagementSystem",
+            "request": "launch",
+            "mainClass": "LibraryManagementSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "MarkSheetSystem",
+            "request": "launch",
+            "mainClass": "MarkSheetSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
             "name": "date",
             "request": "launch",
             "mainClass": "date",
