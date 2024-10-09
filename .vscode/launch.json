@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WorkerFees",
+            "request": "launch",
+            "mainClass": "employment.WorkerFees",
+            "projectName": "java procject_db5ee858"
+        },
+        {
+            "type": "java",
+            "name": "EmploymentId",
+            "request": "launch",
+            "mainClass": "employment.EmploymentId",
+            "projectName": "java procject_db5ee858"
+        },
+        {
+            "type": "java",
             "name": "date",
             "request": "launch",
             "mainClass": "date",

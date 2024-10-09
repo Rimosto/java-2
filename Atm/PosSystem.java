@@ -41,7 +41,8 @@ public class PosSystem {
     void login() {
         int attempts = 0;
         while (attempts < MAX_LOGIN_ATTEMPTS) {
-            System.out.print("Enter password: ");
+            System.out.print("Enter password: ")
+            ;
             String password = scanner.nextLine();
             if (password.equals(PASSWORD)) {
                 System.out.println("Login successful!");
