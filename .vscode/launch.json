@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -186,4 +187,194 @@
             "projectName": "java procject_d1435aa8"
         }
     ]
+=======
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LibraryManagementSystem",
+            "request": "launch",
+            "mainClass": "LibraryManagementSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "MarkSheetSystem",
+            "request": "launch",
+            "mainClass": "MarkSheetSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "date",
+            "request": "launch",
+            "mainClass": "date",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "SystechRestaurant",
+            "request": "launch",
+            "mainClass": "SystechRestaurant",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "Receipt",
+            "request": "launch",
+            "mainClass": "Receipt",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "PosSystem",
+            "request": "launch",
+            "mainClass": "Exception.PosSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "POs",
+            "request": "launch",
+            "mainClass": "Atm.POs",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "POs",
+            "request": "launch",
+            "mainClass": "POs",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "PosSystem",
+            "request": "launch",
+            "mainClass": "PosSystem",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "Atm",
+            "request": "launch",
+            "mainClass": "Atm",
+            "projectName": "java procject_bd756612"
+        },
+        {
+            "type": "java",
+            "name": "WorkerFees",
+            "request": "launch",
+            "mainClass": "employment.WorkerFees",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "EmploymentId",
+            "request": "launch",
+            "mainClass": "employment.EmploymentId",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Dog",
+            "request": "launch",
+            "mainClass": "inheritance.Dog",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Staircase",
+            "request": "launch",
+            "mainClass": "Staircase",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Animal",
+            "request": "launch",
+            "mainClass": "inheritance.Animal",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "training.animals.inheritance.App",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverridingPolymorhism",
+            "request": "launch",
+            "mainClass": "com.systechafrica.part2.inheritance.animals.MethodOverridingPolymorhism",
+            "projectName": "java-se-training"
+        },
+        {
+            "type": "java",
+            "name": "MethodOverridingPolymorhism",
+            "request": "launch",
+            "mainClass": "MethodOverridingPolymorhism",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Data",
+            "request": "launch",
+            "mainClass": "Data",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "oop",
+            "request": "launch",
+            "mainClass": "oop",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "variables",
+            "request": "launch",
+            "mainClass": "variables",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "arrary",
+            "request": "launch",
+            "mainClass": "arrary",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "staircase",
+            "request": "launch",
+            "mainClass": "staircase",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "diamond",
+            "request": "launch",
+            "mainClass": "diamond",
+            "projectName": "java procject_d1435aa8"
+        },
+        {
+            "type": "java",
+            "name": "java",
+            "request": "launch",
+            "mainClass": "java",
+            "projectName": "java procject_d1435aa8"
+        }
+    ]
+>>>>>>> fd3acf5d34a323ca3aa5677ec026cdf0941640ad
 }
